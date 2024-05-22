@@ -11,6 +11,13 @@ cc_binary(
         "@libpciaccess//:libpciaccess",
         "@hwloc//:hwloc",
         "@krb5//:krb5",
+        "@re2",
+        "@rapidjson",
+        "@hdrhistogram_c",
+        "@liburing",
+        "@zlib",
+        "@fmt",
+        "@c-ares",
     ],
 )
 
