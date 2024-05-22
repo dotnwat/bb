@@ -30,6 +30,8 @@ cc_binary(
         "@snappy//:libsnappy",
         "@lksctp//:liblksctp",
         "@roaring//:libroaring",
+        "@wasmtime//:libwasmtime",
+        "@seastar//:libseastar",
     ],
 )
 

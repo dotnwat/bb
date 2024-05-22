@@ -185,8 +185,18 @@ http_archive(
     url = "https://github.com/redpanda-data/CRoaring/archive/c433d1c70c10fb2e40f049e019e2abbcafa6e69d.tar.gz",
 )
 
-# wasmtime
-# tinygo
-# roaring
-# seastar
-# valgrind
+http_archive(
+    name = "wasmtime",
+    build_file = "@//thirdparty:wasmtime.BUILD",
+    sha256 = "a7f989b170d109696b928b4b3d1ec1d930064af7df47178e1341bd96e5c34465",
+    strip_prefix = "wasmtime-9e1084ffac08b1bf9c82de40c0efc1baff14b9ad",
+    url = "https://github.com/bytecodealliance/wasmtime/archive/9e1084ffac08b1bf9c82de40c0efc1baff14b9ad.tar.gz",
+)
+
+http_archive(
+    name = "seastar",
+    build_file = "@//thirdparty:seastar.BUILD",
+    sha256 = "166ac9f38ac5f7e900d8f9c892afaaa7c8d9909b0dd4b6315bcb335f50ddf728",
+    strip_prefix = "seastar-16a722bc0a8792daa20c165dabc07e4b1e5dff26",
+    url = "https://github.com/redpanda-data/seastar/archive/16a722bc0a8792daa20c165dabc07e4b1e5dff26.tar.gz",
+)
