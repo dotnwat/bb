@@ -136,3 +136,11 @@ http_archive(
     strip_prefix = "openssl-3.0.9",
     url = "https://vectorized-public.s3.us-west-2.amazonaws.com/dependencies/openssl-3.0.9.tar.gz",
 )
+
+http_archive(
+    name = "avro",
+    build_file = "@//thirdparty:avro.BUILD",
+    sha256 = "d4043000885812223c7a8a444781f9ded46aca4dc6216d86bbde18fd94c1562a",
+    strip_prefix = "avro-836cb1004090435a985becda1daa619c407e1376",
+    url = "https://github.com/redpanda-data/avro/archive/836cb1004090435a985becda1daa619c407e1376.tar.gz",
+)

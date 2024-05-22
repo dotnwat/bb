@@ -25,6 +25,7 @@ cc_binary(
         "@base64//:libbase64",
         "@ada//:libada",
         "@openssl//:libopenssl",
+        "@avro//:libavro",
     ],
 )
 
