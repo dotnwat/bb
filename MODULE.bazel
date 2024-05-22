@@ -1,0 +1,68 @@
+module(
+    name = "redpanda",
+    repo_name = "com_github_redpanda_data_redpanda",
+)
+
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+
+# Hedron's Compile Commands Extractor for Bazel
+# https://github.com/hedronvision/bazel-compile-commands-extractor
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True)
+git_override(
+    module_name = "hedron_compile_commands",
+    commit = "5bcb0bd8a917b2b48fb5dc55818515f4be3b63ff",
+    remote = "https://github.com/hedronvision/bazel-compile-commands-extractor.git",
+)
+
+bazel_dep(name = "googletest", version = "1.14.0")
+bazel_dep(name = "abseil-cpp", version = "20240116.1")
+bazel_dep(name = "rules_foreign_cc", version = "0.10.1")
+
+http_archive(
+    name = "nettle",
+    build_file = "@//thirdparty:nettle.BUILD",
+    sha256 = "ccfeff981b0ca71bbd6fbcb054f407c60ffb644389a5be80d6716d5b550c6ce3",
+    strip_prefix = "nettle-3.9.1",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/nettle-3.9.1.tar.gz",
+)
+
+http_archive(
+    name = "gmp",
+    build_file = "@//thirdparty:gmp.BUILD",
+    sha256 = "fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2",
+    strip_prefix = "gmp-6.2.1",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/gmp-6.2.1.tar.xz",
+)
+
+http_archive(
+    name = "gnutls",
+    build_file = "@//thirdparty:gnutls.BUILD",
+    sha256 = "f74fc5954b27d4ec6dfbb11dea987888b5b124289a3703afcada0ee520f4173e",
+    strip_prefix = "gnutls-3.8.3",
+    url = "https://vectorized-public.s3.us-west-2.amazonaws.com/dependencies/gnutls-3.8.3.tar.xz",
+)
+
+http_archive(
+    name = "numactl",
+    build_file = "@//thirdparty:numactl.BUILD",
+    sha256 = "1ee27abd07ff6ba140aaf9bc6379b37825e54496e01d6f7343330cf1a4487035",
+    strip_prefix = "numactl-2.0.14",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/numactl-v2.0.14.tar.gz",
+)
+
+http_archive(
+    name = "libpciaccess",
+    build_file = "@//thirdparty:libpciaccess.BUILD",
+    sha256 = "9938b18509553452c6e13f79e16cbaffec9ea67119aa2de5d75e83c4f67ff400",
+    strip_prefix = "libpciaccess-libpciaccess-0.16",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/libpciaccess-0.16.tar.bz2",
+)
+
+http_archive(
+    name = "hwloc",
+    build_file = "@//thirdparty:hwloc.BUILD",
+    sha256 = "1f6d0f3edddd0070717f9f17e3a090a26d203e026c192144aa5f587725cf11e3",
+    strip_prefix = "hwloc-hwloc-2.9.3",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/hwloc-2.9.3.tar.gz",
+)
