@@ -28,6 +28,8 @@ cc_binary(
         "@avro//:libavro",
         "@unordered_dense//:libunordered_dense",
         "@snappy//:libsnappy",
+        "@lksctp//:liblksctp",
+        "@roaring//:libroaring",
     ],
 )
 

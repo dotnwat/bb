@@ -169,12 +169,24 @@ http_archive(
     url = "https://github.com/redpanda-data/snappy/archive/ca541bd6c80d97cf93d1a33e613521947701ea53.tar.gz",
 )
 
+http_archive(
+    name = "lksctp",
+    build_file = "@//thirdparty:lksctp.BUILD",
+    sha256 = "0c8fac0a5c66eea339dce6be857101b308ce1064c838b81125b0dde3901e8032",
+    strip_prefix = "lksctp-tools-lksctp-tools-1.0.19",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/lksctp-tools-1.0.19.tar.gz",
+)
+
+http_archive(
+    name = "roaring",
+    build_file = "@//thirdparty:roaring.BUILD",
+    sha256 = "78487658b774f27546e79de2ddd37fca56679b23f256425d2c86aabf7d1b8066",
+    strip_prefix = "CRoaring-c433d1c70c10fb2e40f049e019e2abbcafa6e69d",
+    url = "https://github.com/redpanda-data/CRoaring/archive/c433d1c70c10fb2e40f049e019e2abbcafa6e69d.tar.gz",
+)
+
 # wasmtime
 # tinygo
 # roaring
 # seastar
 # valgrind
-# lksctp-tools
-
-# ExternalProject_Add(unordered_dense
-# ExternalProject_Add(snappy
