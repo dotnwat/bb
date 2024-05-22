@@ -23,6 +23,8 @@ cc_binary(
         "@xml2//:libxml2",
         "@cryptopp//:libcryptopp",
         "@base64//:libbase64",
+        "@ada//:libada",
+        "@openssl//:libopenssl",
     ],
 )
 
