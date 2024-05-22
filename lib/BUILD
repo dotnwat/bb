@@ -10,6 +10,7 @@ cc_binary(
         "@numactl//:libnumactl",
         "@libpciaccess//:libpciaccess",
         "@hwloc//:hwloc",
+        "@krb5//:krb5",
     ],
 )
 

@@ -1,7 +1,7 @@
 load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make")
 
 filegroup(
-    name = "nettle_srcs",
+    name = "krb5_srcs",
     srcs = glob(["**"]),
 )
 
@@ -13,22 +13,19 @@ filegroup(
 # )
 # deps: gmp
 configure_make(
-    name = "libnettle",
-    lib_source = ":nettle_srcs",
+    name = "krb5",
+    lib_source = ":krb5_srcs",
     configure_in_place = True,
-    autogen = True,
-    autogen_command = ".bootstrap",
-    out_shared_libs = ["libnettle.so", "libhogweed.so"],
-    out_static_libs = ["libnettle.a", "libhogweed.a"],
-    out_lib_dir = "lib64",
+    autoreconf = True,
+    autoreconf_options = ["-ivf ./src"],
+    out_shared_libs = ["libkrb5.so"],
+    configure_command = "./src/configure",
     configure_options = [
-        "--disable-documentation",
+        "--srcdir=./src",
+        "--disable-thread-support",
+        "--without-netlib",
         "--enable-shared",
-        "--enable-static",
-        "--enable-x86-aesni",
-    ],
-    deps = [
-        "@gmp//:libgmp",
+        "--disable-static",
     ],
     visibility = [
         "//visibility:public",
