@@ -26,6 +26,8 @@ cc_binary(
         "@ada//:libada",
         "@openssl//:libopenssl",
         "@avro//:libavro",
+        "@unordered_dense//:libunordered_dense",
+        "@snappy//:libsnappy",
     ],
 )
 
