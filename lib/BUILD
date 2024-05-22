@@ -21,6 +21,8 @@ cc_binary(
         "@lz4",
         "@xz//:libxz",
         "@xml2//:libxml2",
+        "@cryptopp//:libcryptopp",
+        "@base64//:libbase64",
     ],
 )
 

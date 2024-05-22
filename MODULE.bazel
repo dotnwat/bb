@@ -104,3 +104,19 @@ http_archive(
     strip_prefix = "libxml2-2.10.4",
     url = "https://vectorized-public.s3.amazonaws.com/dependencies/libxml2-2.10.4.tar.xz",
 )
+
+http_archive(
+    name = "cryptopp",
+    build_file = "@//thirdparty:cryptopp.BUILD",
+    sha256 = "11a6dbc749c27687ddf13195950589596f51361210a1f67e3c383cc4961f3e61",
+    strip_prefix = "cryptopp-CRYPTOPP_8_7_0",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/CRYPTOPP_8_7_0.tar.xz",
+)
+
+http_archive(
+    name = "base64",
+    build_file = "@//thirdparty:base64.BUILD",
+    sha256 = "b21be58a90d31302ba86056db7ef77a481393b9359c505be5337d7d54e8a0559",
+    strip_prefix = "base64-0.5.0",
+    url = "https://vectorized-public.s3.amazonaws.com/dependencies/base64-v0.5.0.tar.gz",
+)
