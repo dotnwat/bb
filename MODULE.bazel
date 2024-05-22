@@ -144,3 +144,14 @@ http_archive(
     strip_prefix = "avro-836cb1004090435a985becda1daa619c407e1376",
     url = "https://github.com/redpanda-data/avro/archive/836cb1004090435a985becda1daa619c407e1376.tar.gz",
 )
+
+http_archive(
+    name = "boost",
+    build_file = "@//thirdparty:boost.BUILD",
+    #sha256 = "273f1be93238a068aba4f9735a4a2b003019af067b9c183ed227780b8f36062c",
+    #strip_prefix = "boost_1_79_0",
+    strip_prefix = "boost_1_85_0",
+    #url = "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.gz",
+    sha256 = "be0d91732d5b0cc6fbb275c7939974457e79b54d6f07ce2e3dfdd68bef883b0b",
+    url = "https://boostorg.jfrog.io/artifactory/main/release/1.85.0/source/boost_1_85_0.tar.gz",
+)
