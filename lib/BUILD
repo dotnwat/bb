@@ -17,7 +17,6 @@ cc_binary(
         "@liburing",
         "@zlib",
         "@fmt",
-        #"@c-ares",
         "@lz4",
         "@xz//:libxz",
         "@xml2//:libxml2",
